@@ -6,9 +6,8 @@
 
 body {
     background-color: #0a0a0a;
-    color: #e0e0e0;
+    color: #ffffff;
     font-family: 'Courier New', monospace;
-    line-height: 1.7;
 }
 
 /* Navbar */
@@ -16,165 +15,152 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(10, 10, 10, 0.97);
+    background: rgba(10, 10, 10, 0.98);
     border-bottom: 1px solid #00f3ff;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .nav-content {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 18px 40px;
+    padding: 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo {
-    font-size: 1.85rem;
-    font-weight: 700;
+    font-size: 2.2rem;
+    font-weight: 900;
+    letter-spacing: 4px;
     color: #00f3ff;
     text-decoration: none;
-    text-shadow: 0 0 12px #00f3ff;
+    text-shadow: 0 0 15px #00f3ff;
 }
 
 .nav-links a {
-    color: #ccc;
+    color: #ddd;
     text-decoration: none;
-    margin-left: 32px;
-    font-size: 1.05rem;
-    transition: all 0.3s;
+    margin-left: 40px;
+    font-size: 1.1rem;
+    transition: color 0.3s;
 }
 
 .nav-links a:hover {
     color: #00f3ff;
-    text-shadow: 0 0 8px #00f3ff;
 }
 
-/* Hero */
+/* Hero - estilo Nike grande */
 .hero {
-    height: 92vh;
+    height: 100vh;
+    min-height: 700px;
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), 
+                url('https://via.placeholder.com/1920x1080/0a0a0a/00f3ff?text=Null+Hero') center/cover no-repeat;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85));
-    padding-top: 70px;
+    padding-top: 80px;
+}
+
+.hero-content {
+    max-width: 800px;
 }
 
 .neon-title {
-    font-size: 6rem;
+    font-size: 7rem;
     font-weight: 900;
-    letter-spacing: 0.18em;
-    color: #ffffff;
-    text-shadow: 
-        0 0 10px #fff,
-        0 0 25px #00f3ff,
-        0 0 50px #00f3ff;
-    margin-bottom: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 0 0 20px #00f3ff, 0 0 40px #00f3ff, 0 0 80px #c300ff;
+    margin-bottom: 20px;
 }
 
 .tagline {
-    font-size: 1.45rem;
-    color: #aaaaaa;
+    font-size: 2rem;
+    color: #00f3ff;
     margin-bottom: 50px;
-    letter-spacing: 3px;
+    letter-spacing: 6px;
 }
 
-/* Botones más realistas */
+/* Botones estilo Nike (grandes y potentes) */
 .btn {
     display: inline-block;
-    padding: 14px 34px;
-    margin: 8px;
-    border: 2px solid;
-    background: transparent;
-    color: inherit;
+    padding: 18px 42px;
+    margin: 10px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-    border-radius: 6px;
+    border: 3px solid;
+    border-radius: 0;
     transition: all 0.4s ease;
-    position: relative;
-    overflow: hidden;
 }
 
-.btn:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 0 30px currentColor;
-    background: rgba(255, 255, 255, 0.07);
+.btn-primary {
+    background: #00f3ff;
+    color: #0a0a0a;
+    border-color: #00f3ff;
 }
 
-.btn-cyan   { border-color: #00f3ff; color: #00f3ff; }
-.btn-purple { border-color: #c300ff; color: #c300ff; }
-.btn-pink   { border-color: #ff00aa; color: #ff00aa; }
+.btn-primary:hover {
+    background: transparent;
+    color: #00f3ff;
+    box-shadow: 0 0 40px #00f3ff;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #fff;
+    border-color: #fff;
+}
+
+.btn-secondary:hover {
+    background: #fff;
+    color: #0a0a0a;
+    box-shadow: 0 0 30px #fff;
+}
 
 /* Secciones */
 .section {
-    padding: 110px 40px;
-    max-width: 920px;
+    padding: 120px 40px;
+    max-width: 1100px;
     margin: 0 auto;
     text-align: center;
 }
 
 .section h2 {
-    font-size: 2.9rem;
-    margin-bottom: 35px;
+    font-size: 3.5rem;
+    margin-bottom: 40px;
     color: #00f3ff;
-    text-shadow: 0 0 15px #00f3ff;
 }
 
 /* Skills */
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    justify-content: center;
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
 }
 
 .skill {
-    background: rgba(0, 243, 255, 0.08);
-    color: #00f3ff;
-    padding: 12px 24px;
-    border: 1px solid #00f3ff;
-    border-radius: 50px;
-    font-size: 1.15rem;
+    background: rgba(0, 243, 255, 0.1);
+    border: 2px solid #00f3ff;
+    padding: 25px 20px;
+    font-size: 1.3rem;
     transition: all 0.3s;
 }
 
 .skill:hover {
-    background: rgba(0, 243, 255, 0.2);
-    transform: scale(1.05);
-}
-
-/* Contacto */
-.contact-links {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin-top: 40px;
-    flex-wrap: wrap;
-}
-
-.contact-btn {
-    padding: 14px 32px;
-    border: 2px solid #666;
-    color: #ddd;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: all 0.4s;
-}
-
-.contact-btn:hover {
-    border-color: #00f3ff;
-    color: #00f3ff;
-    box-shadow: 0 0 20px #00f3ff;
+    background: rgba(0, 243, 255, 0.25);
+    transform: scale(1.08);
 }
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 50px 20px 30px;
+    padding: 60px 20px;
     color: #555;
-    font-size: 0.95rem;
+    border-top: 1px solid #222;
 }
