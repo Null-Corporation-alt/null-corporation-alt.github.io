@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0a0a0a;
+    color: #ffffff;
+    font-family: 'Courier New', monospace;
+}
+
+/* NAVBAR minimal */
+.neon-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(10, 10, 10, 0.95);
+    z-index: 1000;
+    border-bottom: 1px solid #00f3ff;
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.3);
+}
+
+.nav-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #00f3ff;
+    text-shadow: 0 0 10px #00f3ff;
+}
+
+.nav-links a {
+    color: #ddd;
+    text-decoration: none;
+    margin-left: 35px;
+    font-size: 1.05rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00f3ff;
+    text-shadow: 0 0 8px #00f3ff;
+}
+
+/* HEADER */
+.neon-header {
+    height: 85vh;
+    min-height: 550px;
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+                url('https://via.placeholder.com/1920x1080/0a0a0a/1a0022?text=Tu+Foto+de+Fondo') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 65px;
+}
+
+.header-content {
+    z-index: 2;
+}
+
+.neon-text {
+    font-size: 6rem;
+    font-weight: 900;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 
+        0 0 8px #fff,
+        0 0 20px #00f3ff,
+        0 0 40px #00f3ff;
+    margin-bottom: 15px;
+}
+
+.tagline {
+    font-size: 1.45rem;
+    color: #aaaaaa;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+}
+
+/* Botones minimal neon */
+.neon-buttons {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.neon-btn {
+    padding: 12px 32px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    border: 2px solid;
+    border-radius: 4px;
+    background: transparent;
+    transition: all 0.35s ease;
+    color: inherit;
+}
+
+.neon-btn.cyan   { color: #00f3ff; border-color: #00f3ff; }
+.neon-btn.purple { color: #c300ff; border-color: #c300ff; }
+.neon-btn.pink   { color: #ff00aa; border-color: #ff00aa; }
+
+.neon-btn:hover {
+    background: rgba(255,255,255,0.06);
+    box-shadow: 0 0 25px currentColor;
+    transform: translateY(-3px);
+}
+
+/* Footer minimal */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: #555;
+    font-size: 0.95rem;
+}
