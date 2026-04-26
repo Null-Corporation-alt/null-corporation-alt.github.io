@@ -7,12 +7,11 @@
     <link rel="stylesheet" href="static/styles.css">
 </head>
 <body>
-    <!-- NAVBAR -->
-    <nav class="neon-navbar">
+    <!-- Navbar minimal -->
+    <nav class="navbar">
         <div class="nav-content">
-            <div class="logo">NULL</div>
+            <a href="/" class="logo">NULL</a>
             <div class="nav-links">
-                <a href="#home">Inicio</a>
                 <a href="#about">Sobre Mí</a>
                 <a href="#skills">Habilidades</a>
                 <a href="#projects">Proyectos</a>
@@ -21,58 +20,54 @@
         </div>
     </nav>
 
-    <!-- HEADER PRINCIPAL -->
-    <header id="home" class="neon-header">
-        <div class="header-content">
-            <h1 class="neon-text">NULL</h1>
-            <p class="tagline">Hacking the Future</p>
-            
-            <div class="neon-buttons">
-                <a href="#about" class="neon-btn cyan">Sobre Mí</a>
-                <a href="#projects" class="neon-btn purple">Proyectos</a>
-                <a href="#contact" class="neon-btn pink">Contacto</a>
-            </div>
+    <!-- Hero Header -->
+    <header id="home" class="hero">
+        <h1 class="neon-title">NULL</h1>
+        <p class="tagline">Hacking the Future</p>
+        
+        <div class="hero-buttons">
+            <a href="#about" class="btn neon-cyan">Sobre Mí</a>
+            <a href="#projects" class="btn neon-purple">Proyectos</a>
         </div>
     </header>
 
-    <!-- Sección Sobre Mí -->
+    <!-- Sobre Mí -->
     <section id="about" class="section">
         <h2>Sobre Mí</h2>
-        <p>Aquí puedes escribir quién eres, tu historia en tecnología, tu filosofía como Null, etc.</p>
+        <p>Null. Desarrollador, hacker ético y apasionado por la tecnología oscura y elegante.</p>
     </section>
 
-    <!-- Sección Habilidades -->
+    <!-- Habilidades -->
     <section id="skills" class="section">
         <h2>Habilidades</h2>
-        <div class="skills-grid">
-            <div class="skill-card">Python</div>
-            <div class="skill-card">Cybersecurity</div>
-            <div class="skill-card">Linux</div>
-            <div class="skill-card">Docker</div>
-            <div class="skill-card">Flask</div>
-            <div class="skill-card">Git</div>
+        <div class="skills">
+            <span class="skill">Python</span>
+            <span class="skill">Cybersecurity</span>
+            <span class="skill">Linux</span>
+            <span class="skill">Flask</span>
+            <span class="skill">Docker</span>
         </div>
     </section>
 
-    <!-- Sección Proyectos -->
+    <!-- Proyectos -->
     <section id="projects" class="section">
         <h2>Proyectos</h2>
-        <p>Aquí irán tus proyectos más importantes. Puedes añadir tarjetas más adelante.</p>
+        <p>Próximamente aquí irán mis proyectos más importantes.</p>
     </section>
 
-    <!-- Sección Contacto -->
+    <!-- Contacto -->
     <section id="contact" class="section">
         <h2>Contacto</h2>
-        <p>¿Quieres colaborar o solo charlar sobre tech?</p>
-        <div class="contact-buttons">
-            <a href="#" class="neon-btn cyan">Email</a>
-            <a href="#" class="neon-btn purple">GitHub</a>
-            <a href="#" class="neon-btn pink">X / Twitter</a>
+        <p>¿Quieres hablar de código o colaborar?</p>
+        <div class="contact-links">
+            <a href="#" class="contact-btn">Email</a>
+            <a href="#" class="contact-btn">GitHub</a>
+            <a href="#" class="contact-btn">X</a>
         </div>
     </section>
 
     <footer>
-        <p>© 2026 Null • Code & Neon</p>
+        <p>© 2026 Null</p>
     </footer>
 </body>
 </html>
