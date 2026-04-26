@@ -1,8 +1,12 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     background-color: #0a0a0a;
-    color: #fff;
+    color: #ffffff;
     font-family: 'Courier New', monospace;
 }
 
@@ -42,27 +46,37 @@ body {
     transition: color 0.3s;
 }
 
-.nav-menu a:hover { color: #00f3ff; }
+.nav-menu a:hover {
+    color: #00f3ff;
+}
 
 .login-btn {
     background: #00f3ff;
     color: #0a0a0a;
-    padding: 8px 20px;
+    padding: 10px 22px;
     border-radius: 4px;
     font-weight: bold;
+    text-decoration: none;
 }
 
-/* Hero - Estilo Nike */
+/* Hero */
 .hero {
     height: 100vh;
     min-height: 720px;
     background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), 
-                url('https://picsum.photos/id/1015/1920/1080') center/cover no-repeat; /* Cambia esta URL por la que prefieras */
+                url('https://picsum.photos/id/1015/1920/1080') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4);
 }
 
 .hero-content {
@@ -92,7 +106,7 @@ body {
     color: #ccc;
 }
 
-/* Botones estilo Nike */
+/* Botones */
 .btn {
     display: inline-block;
     padding: 18px 45px;
@@ -143,7 +157,6 @@ body {
     color: #00f3ff;
 }
 
-/* Skills */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -169,42 +182,103 @@ body {
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: rgba(0,0,0,0.9);
-    z-index: 2000;
+    background: rgba(0,0,0,0.95);
+    z-index: 3000;
     align-items: center;
     justify-content: center;
 }
 
 .modal-content {
-    background: #111;
-    padding: 40px;
-    width: 380px;
+    background: #0f0f0f;
+    width: 420px;
     border: 2px solid #00f3ff;
-    text-align: center;
+    border-radius: 8px;
+    padding: 40px 35px;
+    box-shadow: 0 0 60px rgba(0, 243, 255, 0.6);
+    position: relative;
 }
 
 .close {
-    float: right;
-    font-size: 2rem;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 2.2rem;
+    color: #00f3ff;
     cursor: pointer;
+}
+
+.close:hover { color: #ff00aa; }
+
+.modal-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.modal-header h2 {
+    color: #00f3ff;
+    font-size: 2rem;
+    text-shadow: 0 0 15px #00f3ff;
+}
+
+.modal-subtitle {
+    color: #888;
+    margin-top: 8px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 16px 20px;
+    background: #1a1a1a;
+    border: 2px solid #333;
+    color: #fff;
+    font-size: 1.1rem;
+    font-family: inherit;
+    transition: all 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #00f3ff;
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.5);
+    outline: none;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0 25px;
+    font-size: 0.95rem;
+}
+
+.forgot-link {
+    color: #00f3ff;
+    text-decoration: none;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+.modal-footer {
+    text-align: center;
+    margin-top: 25px;
+    color: #666;
+}
+
+.modal-footer a {
     color: #00f3ff;
 }
 
-.modal input {
-    width: 100%;
-    padding: 15px;
-    margin: 15px 0;
-    background: #1a1a1a;
-    border: 1px solid #00f3ff;
-    color: #fff;
-    font-family: inherit;
+/* Botón loading */
+#loginBtn.loading {
+    pointer-events: none;
+    opacity: 0.85;
 }
 
-.full { width: 100%; margin-top: 20px; }
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 60px;
-    color: #555;
+#loginBtn.loading::after {
+    content: "  Entrando...";
 }
