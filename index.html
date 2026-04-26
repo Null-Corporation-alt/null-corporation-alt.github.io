@@ -11,20 +11,24 @@
     <nav class="navbar">
         <div class="nav-content">
             <a href="/" class="logo">NULL</a>
-            <div class="nav-links">
+            <div class="nav-menu">
                 <a href="#about">Sobre Mí</a>
                 <a href="#skills">Habilidades</a>
                 <a href="#projects">Proyectos</a>
                 <a href="#contact">Contacto</a>
+                <a href="#" onclick="showLogin()" class="login-btn">Iniciar Sesión</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section - Grande y potente como Nike -->
+    <!-- Hero Section - Estilo Nike potente -->
     <header id="home" class="hero">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1 class="neon-title">NULL</h1>
-            <p class="tagline">CODE IS MY WEAPON</p>
+            <h1 class="main-title">NULL</h1>
+            <p class="subtitle">CODE IS MY WEAPON</p>
+            <p class="description">Hacking the limits. Building the future.</p>
+            
             <div class="hero-buttons">
                 <a href="#about" class="btn btn-primary">CONÓCEME</a>
                 <a href="#projects" class="btn btn-secondary">VER PROYECTOS</a>
@@ -35,14 +39,8 @@
     <!-- Sobre Mí -->
     <section id="about" class="section">
         <h2>Sobre Mí</h2>
-        <p>
-            Soy <strong>Null</strong>, hacker ético y desarrollador especializado en sistemas seguros y tecnología profunda. 
-            Creo herramientas que rompen límites y protegen lo importante.
-        </p>
-        <p>
-            Mi filosofía es simple: código limpio, ejecución brutal y estética cyberpunk. 
-            No sigo tendencias. Las creo.
-        </p>
+        <p>Soy Null, hacker ético y desarrollador especializado en sistemas seguros y tecnología ofensiva/defensiva.</p>
+        <p>Mi misión es simple: romper barreras técnicas y crear herramientas que marquen la diferencia.</p>
     </section>
 
     <!-- Habilidades -->
@@ -51,8 +49,8 @@
         <div class="skills-grid">
             <div class="skill">Python</div>
             <div class="skill">Cybersecurity</div>
-            <div class="skill">Linux & Servers</div>
-            <div class="skill">Flask / Backend</div>
+            <div class="skill">Linux</div>
+            <div class="skill">Flask & Backend</div>
             <div class="skill">Docker & DevOps</div>
             <div class="skill">Reverse Engineering</div>
         </div>
@@ -61,15 +59,15 @@
     <!-- Proyectos -->
     <section id="projects" class="section">
         <h2>Proyectos</h2>
-        <p class="coming-soon">Próximamente aquí mostraré mis proyectos más potentes.</p>
+        <p class="coming-soon">Mis proyectos más potentes llegarán pronto.</p>
     </section>
 
     <!-- Contacto -->
     <section id="contact" class="section">
         <h2>Contacto</h2>
-        <p>¿Listo para colaborar o hablar de tecnología sin límites?</p>
+        <p>¿Quieres colaborar o hablar sin límites?</p>
         <div class="contact-buttons">
-            <a href="#" class="btn btn-primary">Enviar Email</a>
+            <a href="#" class="btn btn-primary">Enviar Mensaje</a>
             <a href="https://github.com/null-corporation-alt" target="_blank" class="btn btn-secondary">GitHub</a>
         </div>
     </section>
@@ -77,5 +75,19 @@
     <footer>
         <p>© 2026 NULL • Hacking the Future</p>
     </footer>
+
+    <!-- Modal de Login -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="hideLogin()">×</span>
+            <h2>Iniciar Sesión</h2>
+            <form>
+                <input type="text" placeholder="Usuario o Email" required>
+                <input type="password" placeholder="Contraseña" required>
+                <button type="submit" class="btn btn-primary full">Entrar</button>
+            </form>
+            <p class="modal-footer">¿No tienes cuenta? <a href="#">Regístrate</a></p>
+        </div>
+    </div>
 </body>
 </html>
