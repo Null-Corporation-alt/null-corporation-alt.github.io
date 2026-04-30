@@ -9,11 +9,13 @@
     cursor: default;
 }
 
+/* Permitir selección solo en campos de texto */
 input, textarea {
     user-select: text;
     cursor: text;
 }
 
+/* Cursor de mano en enlaces y botones */
 a, button, .btn {
     cursor: pointer;
 }
@@ -65,6 +67,7 @@ body {
     color: #00f3ff;
 }
 
+/* Botón Iniciar Sesión */
 .login-btn {
     background: #00f3ff;
     color: #000000;
@@ -82,18 +85,18 @@ body {
     box-shadow: 0 0 25px rgba(0, 243, 255, 0.9);
 }
 
-/* Espacio para navbar fijo en todas las páginas */
+/* Espacio para navbar fijo */
 .content-wrapper {
     padding-top: 90px;
-    min-height: 100vh;
+    min-height: calc(100vh - 90px);
 }
 
-/* Hero */
+/* Hero con tu imagen del bosque */
 .hero {
     height: 100vh;
     min-height: 720px;
-    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), 
-                url('https://picsum.photos/id/1015/1920/1080') center/cover no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), 
+                url('https://i.imgur.com/your-image.jpg') center/cover no-repeat; /* ← Cambia esta URL */
     display: flex;
     align-items: center;
     justify-content: center;
