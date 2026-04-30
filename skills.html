@@ -37,7 +37,7 @@
         © 2026 NULL • Hacking the Future
     </footer>
 
-    <!-- Login Modal -->
+    <!-- LOGIN MODAL -->
     <div id="loginModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="hideLogin()">×</span>
@@ -54,6 +54,10 @@
                 </div>
                 <button type="submit" id="loginBtn" class="btn btn-primary full">ENTRAR AL SISTEMA</button>
             </form>
+            <div class="options">
+                <label><input type="checkbox"> Recordarme</label>
+                <a href="#" onclick="forgotPassword()" class="forgot-link">¿Olvidaste tu contraseña?</a>
+            </div>
         </div>
     </div>
 
@@ -68,6 +72,9 @@
                 alert("¡Acceso concedido! (Demo)");
                 hideLogin();
             }, 1500);
+        }
+        function forgotPassword() {
+            alert("En un sistema real se enviaría un enlace de recuperación.");
         }
     </script>
 </body>
