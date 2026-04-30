@@ -23,14 +23,14 @@
     <section class="section">
         <h2>Sobre Mí</h2>
         <p>Soy <strong>Null</strong>, hacker ético y desarrollador especializado en sistemas seguros y tecnología profunda.</p>
-        <p>Creo herramientas que rompen límites y protegen lo importante. Mi filosofía es simple: código limpio, ejecución brutal y estética cyberpunk.</p>
+        <p>Mi misión es romper barreras técnicas y crear herramientas que marquen la diferencia. Código limpio, ejecución brutal y estética cyberpunk.</p>
     </section>
 
     <footer style="text-align:center; padding:60px; color:#555;">
         © 2026 NULL • Hacking the Future
     </footer>
 
-    <!-- Login Modal (mismo script) -->
+    <!-- LOGIN MODAL -->
     <div id="loginModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="hideLogin()">×</span>
@@ -47,6 +47,10 @@
                 </div>
                 <button type="submit" id="loginBtn" class="btn btn-primary full">ENTRAR AL SISTEMA</button>
             </form>
+            <div class="options">
+                <label><input type="checkbox"> Recordarme</label>
+                <a href="#" onclick="forgotPassword()" class="forgot-link">¿Olvidaste tu contraseña?</a>
+            </div>
         </div>
     </div>
 
@@ -61,6 +65,9 @@
                 alert("¡Acceso concedido! (Demo)");
                 hideLogin();
             }, 1500);
+        }
+        function forgotPassword() {
+            alert("En un sistema real se enviaría un enlace de recuperación.");
         }
     </script>
 </body>
