@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mí - NULL</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="logo">NULL</a>
+            <div class="nav-menu">
+                <a href="about.html">Sobre Mí</a>
+                <a href="skills.html">Habilidades</a>
+                <a href="projects.html">Proyectos</a>
+                <a href="contact.html">Contacto</a>
+                <a href="#" onclick="showLogin()" class="login-btn">INICIAR SESIÓN</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section">
+        <h2>Sobre Mí</h2>
+        <p>Soy <strong>Null</strong>, hacker ético y desarrollador especializado en sistemas seguros y tecnología profunda.</p>
+        <p>Creo herramientas que rompen límites y protegen lo importante. Mi filosofía es simple: código limpio, ejecución brutal y estética cyberpunk.</p>
+    </section>
+
+    <footer style="text-align:center; padding:60px; color:#555;">
+        © 2026 NULL • Hacking the Future
+    </footer>
+
+    <!-- Login Modal (mismo script) -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="hideLogin()">×</span>
+            <div class="modal-header">
+                <h2>INICIAR SESIÓN</h2>
+                <p class="modal-subtitle">Accede al sistema Null</p>
+            </div>
+            <form onsubmit="handleLogin(event)">
+                <div class="input-group">
+                    <input type="text" placeholder="Usuario o Email" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" placeholder="Contraseña" required>
+                </div>
+                <button type="submit" id="loginBtn" class="btn btn-primary full">ENTRAR AL SISTEMA</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showLogin() { document.getElementById('loginModal').style.display = 'flex'; }
+        function hideLogin() { document.getElementById('loginModal').style.display = 'none'; }
+        function handleLogin(e) {
+            e.preventDefault();
+            const btn = document.getElementById('loginBtn');
+            btn.textContent = "VERIFICANDO...";
+            setTimeout(() => {
+                alert("¡Acceso concedido! (Demo)");
+                hideLogin();
+            }, 1500);
+        }
+    </script>
+</body>
+</html>
