@@ -26,7 +26,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Navbar con animación sutil */
+/* Navbar */
 .navbar {
     position: fixed;
     top: 0;
@@ -34,15 +34,89 @@ body {
     background: rgba(10,10,10,0.98);
     border-bottom: 1px solid #00f3ff;
     z-index: 1000;
-    transition: all 0.4s ease;
 }
 
-.navbar:hover {
-    background: rgba(10,10,10,0.995);
-    box-shadow: 0 4px 20px rgba(0, 243, 255, 0.3);
+/* Hero con partículas */
+.hero {
+    height: 100vh;
+    min-height: 720px;
+    background: linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.88)), 
+                url('https://i.imgur.com/O5JFgjp.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
-/* Logo con glow animado */
+/* Contenedor de partículas */
+.particles {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.particle {
+    position: absolute;
+    background: #00f3ff;
+    border-radius: 50%;
+    opacity: 0.25;
+    animation: floatParticle linear infinite;
+    box-shadow: 0 0 8px #00f3ff;
+}
+
+/* Animación de partículas */
+@keyframes floatParticle {
+    0% {
+        transform: translateY(100vh) scale(0.5);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.3;
+    }
+    90% {
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateY(-100px) scale(1.2);
+        opacity: 0;
+    }
+}
+
+/* Título y subtítulo */
+.main-title {
+    font-size: 7.5rem;
+    font-weight: 900;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    text-shadow: 0 0 30px #00f3ff, 0 0 60px #c300ff;
+    z-index: 2;
+    position: relative;
+}
+
+.subtitle {
+    font-size: 2.2rem;
+    color: #00f3ff;
+    letter-spacing: 4px;
+    margin-top: 15px;
+    z-index: 2;
+    position: relative;
+}
+
+/* Resto de estilos (navbar, botones, modal, etc.) */
+.nav-content {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .logo {
     font-size: 2.4rem;
     font-weight: 900;
@@ -50,29 +124,20 @@ body {
     color: #00f3ff;
     text-decoration: none;
     text-shadow: 0 0 15px #00f3ff;
-    animation: logoGlow 4s ease-in-out infinite alternate;
 }
 
-@keyframes logoGlow {
-    from { text-shadow: 0 0 10px #00f3ff; }
-    to { text-shadow: 0 0 25px #00f3ff, 0 0 40px #00f3ff; }
-}
-
-/* Nav links */
 .nav-menu a {
     color: #ddd;
     text-decoration: none;
     margin-left: 35px;
     font-size: 1.1rem;
-    transition: all 0.3s;
+    transition: color 0.3s;
 }
 
 .nav-menu a:hover {
     color: #00f3ff;
-    text-shadow: 0 0 10px #00f3ff;
 }
 
-/* Botón Iniciar Sesión */
 .login-btn {
     background: #00f3ff;
     color: #000000;
@@ -87,80 +152,14 @@ body {
 
 .login-btn:hover {
     background: #00e6ff;
-    box-shadow: 0 0 30px rgba(0, 243, 255, 0.9);
-    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(0, 243, 255, 0.9);
 }
 
-/* Espacio para navbar */
 .content-wrapper {
     padding-top: 90px;
     min-height: calc(100vh - 90px);
 }
 
-/* Hero con tu imagen + animaciones */
-.hero {
-    height: 100vh;
-    min-height: 720px;
-    background: linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.88)), 
-                url('https://i.imgur.com/O5JFgjp.png') center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: radial-gradient(circle, rgba(0,243,255,0.08) 0%, transparent 70%);
-    animation: subtleFog 25s linear infinite;
-}
-
-@keyframes subtleFog {
-    0% { transform: translate(0, 0); }
-    50% { transform: translate(30px, 20px); }
-    100% { transform: translate(0, 0); }
-}
-
-/* Animaciones del título */
-.main-title {
-    font-size: 7.5rem;
-    font-weight: 900;
-    letter-spacing: 8px;
-    text-transform: uppercase;
-    text-shadow: 0 0 30px #00f3ff, 0 0 60px #c300ff;
-    animation: titleEntrance 1.8s ease-out forwards;
-}
-
-@keyframes titleEntrance {
-    from {
-        opacity: 0;
-        transform: translateY(40px) scale(0.95);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
-
-.subtitle {
-    font-size: 2.2rem;
-    color: #00f3ff;
-    letter-spacing: 4px;
-    margin-top: 15px;
-    animation: subtitleGlow 3s ease-in-out infinite alternate;
-}
-
-@keyframes subtitleGlow {
-    from { text-shadow: 0 0 10px #00f3ff; }
-    to { text-shadow: 0 0 25px #00f3ff, 0 0 40px #00f3ff; }
-}
-
-/* Botones con animación */
 .btn {
     display: inline-block;
     padding: 18px 45px;
@@ -172,8 +171,6 @@ body {
     border: 3px solid;
     transition: all 0.4s ease;
     margin: 10px;
-    position: relative;
-    overflow: hidden;
 }
 
 .btn-primary {
@@ -202,20 +199,11 @@ body {
     transform: translateY(-4px);
 }
 
-/* Secciones con fade in al hacer scroll */
 .section {
     padding: 100px 40px;
     max-width: 1100px;
     margin: 0 auto;
     text-align: center;
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 1s ease-out;
-}
-
-.section.visible {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .section h2 {
@@ -224,7 +212,7 @@ body {
     color: #00f3ff;
 }
 
-/* Modal Login */
+/* Modal */
 .modal {
     display: none;
     position: fixed;
@@ -245,43 +233,18 @@ body {
     box-shadow: 0 0 50px rgba(0, 243, 255, 0.5);
     position: relative;
     text-align: center;
-    animation: modalPop 0.4s ease;
 }
 
-@keyframes modalPop {
-    from { transform: scale(0.7); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-}
-
-/* Resto del modal (inputs, etc.) */
-.close { position: absolute; top: 15px; right: 25px; font-size: 2.5rem; color: #00f3ff; cursor: pointer; }
-.close:hover { color: #ff00aa; }
-
-.modal-header h2 {
+.close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 2.5rem;
     color: #00f3ff;
-    font-size: 2.1rem;
-    margin-bottom: 8px;
-    text-shadow: 0 0 10px #00f3ff;
+    cursor: pointer;
 }
 
-.modal-subtitle { color: #777; margin-bottom: 30px; }
-
-.input-group { margin-bottom: 18px; text-align: left; }
-
-.input-group input {
-    width: 100%;
-    padding: 14px 16px;
-    background: #1a1a1a;
-    border: 2px solid #444;
-    color: #fff;
-    font-size: 1.05rem;
-    border-radius: 4px;
-}
-
-.input-group input:focus {
-    border-color: #00f3ff;
-    box-shadow: 0 0 12px rgba(0, 243, 255, 0.4);
-}
+.close:hover { color: #ff00aa; }
 
 .btn.full {
     width: 100%;
