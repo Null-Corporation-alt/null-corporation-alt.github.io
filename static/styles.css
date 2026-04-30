@@ -9,13 +9,11 @@
     cursor: default;
 }
 
-/* Permitir selección solo en inputs */
 input, textarea {
     user-select: text;
     cursor: text;
 }
 
-/* Cursor de mano en enlaces y botones */
 a, button, .btn {
     cursor: pointer;
 }
@@ -66,13 +64,43 @@ body {
     color: #00f3ff;
 }
 
+/* Botones de navbar */
 .login-btn {
     background: #00f3ff;
-    color: #0a0a0a;
-    padding: 10px 22px;
-    border-radius: 4px;
-    font-weight: bold;
+    color: #000000;
+    padding: 12px 26px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 1.05rem;
     text-decoration: none;
+    margin-left: 15px;
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.6);
+    transition: all 0.3s;
+}
+
+.login-btn:hover {
+    background: #00e6ff;
+    box-shadow: 0 0 25px rgba(0, 243, 255, 0.9);
+    transform: translateY(-2px);
+}
+
+.request-btn {
+    background: transparent;
+    color: #c300ff;
+    border: 2px solid #c300ff;
+    padding: 12px 26px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    text-decoration: none;
+    margin-left: 10px;
+    transition: all 0.3s;
+}
+
+.request-btn:hover {
+    background: #c300ff;
+    color: #000;
+    box-shadow: 0 0 20px rgba(195, 0, 255, 0.7);
 }
 
 /* Hero */
@@ -102,7 +130,7 @@ body {
     letter-spacing: 4px;
 }
 
-/* Botones */
+/* Botones generales */
 .btn {
     display: inline-block;
     padding: 18px 45px;
