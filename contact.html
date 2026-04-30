@@ -20,17 +20,19 @@
         </div>
     </nav>
 
-    <section class="section">
-        <h2>Contacto</h2>
-        <p style="font-size: 1.4rem; max-width: 700px; margin: 0 auto 40px;">
-            ¿Quieres colaborar, discutir ideas o proponer un proyecto?<br>
-            Estoy disponible.
-        </p>
-        <div style="margin-top: 40px;">
-            <a href="#" class="btn btn-primary">Enviar Email</a>
-            <a href="https://github.com/null-corporation-alt" target="_blank" class="btn btn-secondary" style="margin-left: 20px;">GitHub</a>
-        </div>
-    </section>
+    <div class="content-wrapper">
+        <section class="section">
+            <h2>Contacto</h2>
+            <p style="font-size: 1.4rem; max-width: 700px; margin: 0 auto 40px;">
+                ¿Quieres colaborar, discutir ideas o proponer un proyecto?<br>
+                Estoy disponible.
+            </p>
+            <div style="margin-top: 40px;">
+                <a href="#" class="btn btn-primary">Enviar Email</a>
+                <a href="https://github.com/null-corporation-alt" target="_blank" class="btn btn-secondary" style="margin-left: 20px;">GitHub</a>
+            </div>
+        </section>
+    </div>
 
     <footer style="text-align:center; padding:60px; color:#555;">
         © 2026 NULL • Hacking the Future
@@ -53,9 +55,16 @@
                 </div>
                 <button type="submit" id="loginBtn" class="btn btn-primary full">ENTRAR AL SISTEMA</button>
             </form>
+
             <div class="options">
                 <label><input type="checkbox"> Recordarme</label>
                 <a href="#" onclick="forgotPassword()" class="forgot-link">¿Olvidaste tu contraseña?</a>
+            </div>
+
+            <div style="margin-top: 25px; padding-top: 20px; border-top: 1px solid #333;">
+                <a href="#" onclick="requestAccess()" class="request-link">
+                    ¿Quieres pedir acceso al sistema?
+                </a>
             </div>
         </div>
     </div>
@@ -74,6 +83,12 @@
         }
         function forgotPassword() {
             alert("En un sistema real se enviaría un enlace de recuperación.");
+        }
+        function requestAccess() {
+            hideLogin();
+            setTimeout(() => {
+                alert("Solicitud de acceso recibida.\n\nTe contactaremos pronto.");
+            }, 300);
         }
     </script>
 </body>
