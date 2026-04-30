@@ -35,16 +35,14 @@
         © 2026 NULL • Hacking the Future
     </footer>
 
-    <!-- LOGIN MODAL CON "PEDIR ACCESO" DENTRO -->
+    <!-- LOGIN MODAL -->
     <div id="loginModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="hideLogin()">×</span>
-            
             <div class="modal-header">
                 <h2>INICIAR SESIÓN</h2>
                 <p class="modal-subtitle">Accede al sistema Null</p>
             </div>
-
             <form onsubmit="handleLogin(event)">
                 <div class="input-group">
                     <input type="text" placeholder="Usuario o Email" required>
@@ -60,9 +58,8 @@
                 <a href="#" onclick="forgotPassword()" class="forgot-link">¿Olvidaste tu contraseña?</a>
             </div>
 
-            <!-- Pedir Acceso dentro del modal -->
             <div style="margin-top: 25px; padding-top: 20px; border-top: 1px solid #333;">
-                <a href="#" onclick="requestAccess()" class="request-link" style="font-size: 1.05rem;">
+                <a href="#" onclick="requestAccess()" class="request-link">
                     ¿Quieres pedir acceso al sistema?
                 </a>
             </div>
@@ -73,11 +70,9 @@
         function showLogin() {
             document.getElementById('loginModal').style.display = 'flex';
         }
-
         function hideLogin() {
             document.getElementById('loginModal').style.display = 'none';
         }
-
         function handleLogin(e) {
             e.preventDefault();
             const btn = document.getElementById('loginBtn');
@@ -87,15 +82,13 @@
                 hideLogin();
             }, 1500);
         }
-
         function forgotPassword() {
             alert("En un sistema real se enviaría un enlace de recuperación.");
         }
-
         function requestAccess() {
             hideLogin();
             setTimeout(() => {
-                alert("Solicitud de acceso recibida.\n\nTe contactaremos pronto para darte acceso al sistema.");
+                alert("Solicitud de acceso recibida.\n\nTe contactaremos pronto.");
             }, 300);
         }
     </script>
