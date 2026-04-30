@@ -1,210 +1,96 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: #0a0a0a;
-    color: #ffffff;
-    font-family: 'Courier New', monospace;
-}
-
-/* Navbar */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(10,10,10,0.98);
-    border-bottom: 1px solid #00f3ff;
-    z-index: 1000;
-}
-
-.nav-content {
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 2.4rem;
-    font-weight: 900;
-    letter-spacing: 6px;
-    color: #00f3ff;
-    text-decoration: none;
-    text-shadow: 0 0 15px #00f3ff;
-}
-
-.nav-menu a {
-    color: #ddd;
-    text-decoration: none;
-    margin-left: 35px;
-    font-size: 1.1rem;
-    transition: color 0.3s;
-}
-
-.nav-menu a:hover {
-    color: #00f3ff;
-}
-
-.login-btn {
-    background: #00f3ff;
-    color: #0a0a0a;
-    padding: 10px 22px;
-    border-radius: 4px;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-/* Hero solo para index */
-.hero {
-    height: 100vh;
-    min-height: 720px;
-    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), 
-                url('https://picsum.photos/id/1015/1920/1080') center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-}
-
-.main-title {
-    font-size: 7.5rem;
-    font-weight: 900;
-    letter-spacing: 8px;
-    text-transform: uppercase;
-    text-shadow: 0 0 30px #00f3ff, 0 0 60px #c300ff;
-}
-
-.subtitle {
-    font-size: 2.2rem;
-    color: #00f3ff;
-    letter-spacing: 4px;
-}
-
-/* Botones */
-.btn {
-    display: inline-block;
-    padding: 18px 45px;
-    font-size: 1.25rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-decoration: none;
-    border: 3px solid;
-    transition: all 0.4s ease;
-    margin: 10px;
-}
-
-.btn-primary {
-    background: #00f3ff;
-    color: #0a0a0a;
-    border-color: #00f3ff;
-}
-
-.btn-primary:hover {
-    background: transparent;
-    color: #00f3ff;
-    box-shadow: 0 0 40px #00f3ff;
-}
-
-.btn-secondary {
-    background: transparent;
-    color: #fff;
-    border-color: #fff;
-}
-
-.btn-secondary:hover {
-    background: #fff;
-    color: #0a0a0a;
-}
-
-/* Secciones generales */
-.section {
-    padding: 130px 40px;
-    max-width: 1100px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.section h2 {
-    font-size: 3.8rem;
-    margin-bottom: 40px;
-    color: #00f3ff;
-}
-
-/* Modal Login */
+/* ==================== LOGIN MODAL MEJORADO ==================== */
 .modal {
     display: none;
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: rgba(0,0,0,0.95);
+    background: rgba(0, 0, 0, 0.92);
     z-index: 3000;
     align-items: center;
     justify-content: center;
 }
 
 .modal-content {
-    background: #0f0f0f;
-    width: 420px;
+    background: #0c0c0c;
+    width: 400px;
     border: 2px solid #00f3ff;
     border-radius: 8px;
-    padding: 40px 35px;
-    box-shadow: 0 0 60px rgba(0, 243, 255, 0.6);
+    padding: 35px 30px;
+    box-shadow: 0 0 50px rgba(0, 243, 255, 0.5);
     position: relative;
+    text-align: center;
 }
 
 .close {
     position: absolute;
-    top: 15px;
-    right: 25px;
-    font-size: 2.2rem;
+    top: 12px;
+    right: 20px;
+    font-size: 2.5rem;
     color: #00f3ff;
     cursor: pointer;
+    line-height: 1;
 }
 
-.close:hover { color: #ff00aa; }
+.close:hover {
+    color: #ff00aa;
+}
+
+.modal-header h2 {
+    color: #00f3ff;
+    font-size: 2.1rem;
+    margin-bottom: 8px;
+    text-shadow: 0 0 10px #00f3ff;
+}
+
+.modal-subtitle {
+    color: #777;
+    margin-bottom: 30px;
+    font-size: 1rem;
+}
 
 .input-group {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
+    text-align: left;
 }
 
 .input-group input {
     width: 100%;
-    padding: 16px 20px;
+    padding: 14px 16px;
     background: #1a1a1a;
-    border: 2px solid #333;
+    border: 2px solid #444;
     color: #fff;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
+    font-family: inherit;
+    border-radius: 4px;
+    transition: all 0.3s;
 }
 
 .input-group input:focus {
     border-color: #00f3ff;
-    box-shadow: 0 0 15px rgba(0, 243, 255, 0.5);
+    box-shadow: 0 0 12px rgba(0, 243, 255, 0.4);
+    outline: none;
 }
 
 .options {
     display: flex;
     justify-content: space-between;
-    margin: 15px 0 25px;
+    align-items: center;
+    margin: 10px 0 25px;
     font-size: 0.95rem;
 }
 
 .forgot-link {
     color: #00f3ff;
+    text-decoration: none;
 }
 
-.modal-footer {
-    text-align: center;
-    margin-top: 25px;
-    color: #666;
+.forgot-link:hover {
+    text-decoration: underline;
 }
 
-.modal-footer a {
-    color: #00f3ff;
+.btn.full {
+    width: 100%;
+    margin-top: 10px;
+    padding: 16px;
+    font-size: 1.2rem;
 }
