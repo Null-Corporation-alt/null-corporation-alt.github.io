@@ -59,7 +59,7 @@ body {
     text-decoration: none;
 }
 
-/* Hero */
+/* Hero solo para index */
 .hero {
     height: 100vh;
     min-height: 720px;
@@ -72,38 +72,18 @@ body {
     position: relative;
 }
 
-.hero-overlay {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.4);
-}
-
-.hero-content {
-    z-index: 2;
-    max-width: 800px;
-}
-
 .main-title {
     font-size: 7.5rem;
     font-weight: 900;
     letter-spacing: 8px;
     text-transform: uppercase;
     text-shadow: 0 0 30px #00f3ff, 0 0 60px #c300ff;
-    margin-bottom: 10px;
 }
 
 .subtitle {
     font-size: 2.2rem;
     color: #00f3ff;
-    margin-bottom: 20px;
     letter-spacing: 4px;
-}
-
-.description {
-    font-size: 1.4rem;
-    margin-bottom: 50px;
-    color: #ccc;
 }
 
 /* Botones */
@@ -143,7 +123,7 @@ body {
     color: #0a0a0a;
 }
 
-/* Secciones */
+/* Secciones generales */
 .section {
     padding: 130px 40px;
     max-width: 1100px;
@@ -155,25 +135,6 @@ body {
     font-size: 3.8rem;
     margin-bottom: 40px;
     color: #00f3ff;
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 25px;
-}
-
-.skill {
-    background: rgba(0,243,255,0.1);
-    border: 2px solid #00f3ff;
-    padding: 30px 20px;
-    font-size: 1.35rem;
-    transition: 0.3s;
-}
-
-.skill:hover {
-    transform: scale(1.1);
-    background: rgba(0,243,255,0.25);
 }
 
 /* Modal Login */
@@ -209,22 +170,6 @@ body {
 
 .close:hover { color: #ff00aa; }
 
-.modal-header {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.modal-header h2 {
-    color: #00f3ff;
-    font-size: 2rem;
-    text-shadow: 0 0 15px #00f3ff;
-}
-
-.modal-subtitle {
-    color: #888;
-    margin-top: 8px;
-}
-
 .input-group {
     margin-bottom: 20px;
 }
@@ -236,31 +181,22 @@ body {
     border: 2px solid #333;
     color: #fff;
     font-size: 1.1rem;
-    font-family: inherit;
-    transition: all 0.3s;
 }
 
 .input-group input:focus {
     border-color: #00f3ff;
     box-shadow: 0 0 15px rgba(0, 243, 255, 0.5);
-    outline: none;
 }
 
 .options {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     margin: 15px 0 25px;
     font-size: 0.95rem;
 }
 
 .forgot-link {
     color: #00f3ff;
-    text-decoration: none;
-}
-
-.forgot-link:hover {
-    text-decoration: underline;
 }
 
 .modal-footer {
@@ -271,14 +207,4 @@ body {
 
 .modal-footer a {
     color: #00f3ff;
-}
-
-/* Botón loading */
-#loginBtn.loading {
-    pointer-events: none;
-    opacity: 0.85;
-}
-
-#loginBtn.loading::after {
-    content: "  Entrando...";
 }
