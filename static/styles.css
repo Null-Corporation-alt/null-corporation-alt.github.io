@@ -9,13 +9,11 @@
     cursor: default;
 }
 
-/* Permitir selección solo en campos de texto */
 input, textarea {
     user-select: text;
     cursor: text;
 }
 
-/* Cursor de mano en enlaces y botones */
 a, button, .btn {
     cursor: pointer;
 }
@@ -91,12 +89,12 @@ body {
     min-height: calc(100vh - 90px);
 }
 
-/* Hero con tu imagen del bosque */
+/* Hero con TU imagen del bosque */
 .hero {
     height: 100vh;
     min-height: 720px;
-    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), 
-                url('https://cdn.discordapp.com/attachments/1484099436266258516/1499545012961153124/anBn.png?ex=69f52f9f&is=69f3de1f&hm=96372f82530e3baa0cf1c8edd969ab5b8f5a69318e0e21e21ede6f3c26483966') center/cover no-repeat; /* ← Cambia esta URL */
+    background: linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.85)), 
+                url('https://cdn.discordapp.com/attachments/1484099436266258516/1499545012961153124/anBn.png?ex=69f52f9f&is=69f3de1f&hm=96372f82530e3baa0cf1c8edd969ab5b8f5a69318e0e21e21ede6f3c26483966') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
